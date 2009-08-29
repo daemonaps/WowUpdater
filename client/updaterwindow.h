@@ -3,12 +3,15 @@
 
 #include <QtGui/QMainWindow>
 
+#include "ui_updaterwindow.h"
+#include "updater.h"
+
 namespace Ui
 {
     class updaterWindow;
 }
 
-class updaterWindow : public QMainWindow
+class updaterWindow : public QMainWindow, private Ui::updaterWindow, private updater
 {
     Q_OBJECT
 
@@ -17,7 +20,7 @@ public:
     ~updaterWindow();
 
 private:
-    Ui::updaterWindow *ui;
+
 };
 
 #endif // UPDATERWINDOW_H

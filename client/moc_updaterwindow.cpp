@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'updaterwindow.h'
 **
-** Created: Sat Aug 29 12:46:01 2009
+** Created: Sat Aug 29 19:05:10 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!

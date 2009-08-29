@@ -2,12 +2,13 @@
 #include "ui_updaterwindow.h"
 
 updaterWindow::updaterWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::updaterWindow)
+    : QMainWindow(parent),updater()
 {
-    ui->setupUi(this);
+    setupUi(this);
+    md5_wow->setText(m_md5wow);
 }
 
 updaterWindow::~updaterWindow()
 {
-    delete ui;
+
 }

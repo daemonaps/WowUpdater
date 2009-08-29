@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'updaterwindow.ui'
 **
-** Created: Sat Aug 29 12:53:15 2009
+** Created: Sat Aug 29 19:05:04 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -18,6 +18,7 @@
 #include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenuBar>
 #include <QtGui/QProgressBar>
@@ -44,6 +45,9 @@ public:
     QProgressBar *progressBar_2;
     QLabel *label_2;
     QPushButton *pushButton;
+    QGroupBox *groupBox_3;
+    QVBoxLayout *verticalLayout_3;
+    QLineEdit *md5_wow;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -107,7 +111,21 @@ public:
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
-        gridLayout->addWidget(pushButton, 3, 0, 1, 1);
+        gridLayout->addWidget(pushButton, 4, 0, 1, 1);
+
+        groupBox_3 = new QGroupBox(centralWidget);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        verticalLayout_3 = new QVBoxLayout(groupBox_3);
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setMargin(11);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        md5_wow = new QLineEdit(groupBox_3);
+        md5_wow->setObjectName(QString::fromUtf8("md5_wow"));
+
+        verticalLayout_3->addWidget(md5_wow);
+
+
+        gridLayout->addWidget(groupBox_3, 3, 0, 1, 1);
 
         updaterWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(updaterWindow);
@@ -140,6 +158,8 @@ public:
         groupBox_2->setTitle(QApplication::translate("updaterWindow", "Recherche de mise a jour", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("updaterWindow", "T\303\251l\303\251chargement des infos de mise a jour ...", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("updaterWindow", "Quitter", 0, QApplication::UnicodeUTF8));
+        groupBox_3->setTitle(QApplication::translate("updaterWindow", "Debug", 0, QApplication::UnicodeUTF8));
+        md5_wow->setText(QApplication::translate("updaterWindow", "Contenu md( du fichier wow.exe ...", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(updaterWindow);
     } // retranslateUi
 
