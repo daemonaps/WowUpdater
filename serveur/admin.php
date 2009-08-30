@@ -1,20 +1,19 @@
 <?php
 include('init.php');
-define('ADMIN_PASS','magnum');
 
 //Fonctions VUE
 function input($txt,$name,$value='')
 {
-	echo $txt.'<input type="text" name="'.$name.'" value="'.$value'" /><br /><br />';
+	echo $txt.'<input type="text" name="'.$name.'" value="'.$value.'" /><br /><br />';
 }
 
-function fiedset($legend = '')
+function fieldset($legend = '')
 {
 	echo '<fieldset><legend>'.$legend.'</legend>';
 }
 function checkbox($txt,$name,$value='1')
 {
-	echo $txt.'<input type="checkbox" name="'.$name.'" value="'.$value'" /><br /><br />';
+	echo $txt.'<input type="checkbox" name="'.$name.'" value="'.$value.'" /><br /><br />';
 }
 function endFieldset()
 {
@@ -22,6 +21,7 @@ function endFieldset()
 }
 
 //Traitement des informations
+$log = "";
 if(isset($_POST['mdp']))
 {
 	if($_POST['mdp'] == ADMIN_PASS)//Admin
@@ -35,10 +35,15 @@ if(isset($_POST['mdp']))
 			
 			$listeMaj = new updateMgr;
 			$listeMaj->addToDb($url,$from,$to);
+			$log .= 'Mise a jour ajoutee.<br />';
 		}
 		if($_POST['version'])//Ajouter une version
 		{
-
+			$log .= 'Version ajoutee.<br />';
+		}
+		if($_POST['build'])//Ajouter une version
+		{
+			$log .= 'Version du serveur changee.<br />';
 		}
 	}
 	else
@@ -54,6 +59,8 @@ else
 <h1>Administration</h1>
 <form action="" method="post">
 <?php
+if($log != '')
+	echo '<h3>Action effectuees:</h3><p>'.$log.'</p>';
 echo '<div style="color:red;">'.$erreur.'</div>';
 
 input('PassWord Administrateur','mdp',htmlentities($_POST['mdp']));
@@ -77,6 +84,7 @@ fieldset('Version actuelle du serveur');
 	input('Build','build_current');
 endfieldset();
 ?>
+<input type='submit' name="=>" value="=>" />
 </form>
 
 <?php
