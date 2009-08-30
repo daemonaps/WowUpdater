@@ -9,9 +9,17 @@ class updateMgr
 	var $update_liste = array();
 	var $currentBuild;
 
-	function setCurrent($currentBuild)
+	function loadFromDb()
 	{
-		$this->currentBuild = $currentBuild;
+		$retour = mysql_query('SELECT url,\"from\",to FROM updater_maj');
+		while($data = mysql_fetch_array($retour))
+			$this->add($data['url'],$data['from'],$data['to']);
+	}
+
+	function addToDb($url,$from,$to)
+	{
+		$url = mysql_real_escape_string($url);
+		mysql_query('INSERT INTO updater_maj SET url="'.$url.'", from="'.$from.'", to="'.$to.'"') or die(mysql_error());
 	}
 
 	function add($dlUrl,$fromBuild,$toBuild)

@@ -9,9 +9,11 @@ class updateMgr
 	var $update_liste = array();
 	var $currentBuild;
 
-	function setCurrent($currentBuild)
+	function loadFromDb()
 	{
-		$this->currentBuild = $currentBuild;
+		$retour = mysql_query('SELECT url,\"from\",to FROM updater_maj');
+		while($data = mysql_fetch_array($retour))
+			$this->add($data['url'],$data['from'],$data['to']);
 	}
 
 	function add($dlUrl,$fromBuild,$toBuild)
@@ -19,7 +21,7 @@ class updateMgr
 		$this->update_liste[] = array($dlUrl,$from,$to);
 	}
 
-	function getNextUpdateFrom($fromBuild)
+	function getNextUpdateFrom($fromBuild,$maxBuild)
 	{
 		//1 : Lister toutes les MaJ pour cette version
 		$workingMaj = array();
@@ -34,7 +36,8 @@ class updateMgr
 		$bestUpdateUrl = "";
 		foreach($workingMaj as $key)
 		{
-			if($bestToBuild < $workingMaj[KEY_TO]) //Cette MaJ est mieux
+			if($bestToBuild < $workingMaj[KEY_TO] //Cette MaJ est mieux
+				AND $workingMaj[KEY_TO] <= $maxBuild)  //ET convient au serveur
 			{
 				$bestToBuild = $workingMaj[KEY_TO];
 				$bestUpdateUrl = $workingMaj[KEY_URL];
