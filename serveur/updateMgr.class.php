@@ -11,7 +11,7 @@ class updateMgr
 
 	function loadFromDb()
 	{
-		$retour = mysql_query('SELECT url,\"from\",to FROM updater_maj');
+		$retour = mysql_query('SELECT * FROM updater_maj') or die(mysql_error());
 		while($data = mysql_fetch_array($retour))
 			$this->add($data['url'],$data['from'],$data['to']);
 	}

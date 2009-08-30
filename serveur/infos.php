@@ -3,7 +3,9 @@ include('init.php');
 /*
 md5 situé dans l'user agent (nom du navigateur normalement ...)
 */
-$md5Client = $_SERVER['HTTP_USER_AGENT'];
+//$md5Client = $_SERVER['HTTP_USER_AGENT'];
+$md5Client = $_GET['MD5']; //Pour mieux débugger
+
 
 //Chargement ...
 $listeVersions = new versionsMgr;
@@ -14,7 +16,7 @@ $listeMaj->loadFromDb();
 
 //Obtenir le build du client
 $buildClient = 0;
-$version = $listeVersions->getVersionFromMd($md5Client);
+$version = $listeVersions->getVersionFromMd5($md5Client);
 if(!$version) //Erreur
 	die('Erreur, version non prise en charge');
 $buildClient = $version[KEY_BUILD];
@@ -23,7 +25,7 @@ $buildClient = $version[KEY_BUILD];
 $serveurBuild = 8086;
 
 //Meilleur possible mise a jour
-$urlUpdate = listeMaj->getNextUpdateFrom($buildClient,$serveurBuild);
+$urlUpdate = $listeMaj->getNextUpdateFrom($buildClient,$serveurBuild);
 if($urlUpdate == '')
 	die('Impossible de trouver une mise à jour pour votre version du jeu');
 

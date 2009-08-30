@@ -1,4 +1,7 @@
 <?php
 mysql_connect('127.0.0.1','root','');
-mysql_select_db('launcheraps');
+mysql_select_db('db');
+
+include('updateMgr.class.php');
+include('versionsMgr.class.php');
 ?>
