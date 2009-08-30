@@ -99,7 +99,7 @@
     <value type="QString" >CONFIG+=debug</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/home/daniel/qtsdk-2009.03/qt/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.enabled" type="bool" >false</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/home/daniel/Documents/updater/client</value>
    <value key="buildConfiguration" type="int" >2</value>
   </valuemap>
@@ -150,6 +150,43 @@
   <variable>buildconfiguration-Debug-cleanstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-kdnUlUhQ1K,guid=234e2f7b3740fcdf0bb9f7fb4a9a0a27</value>
+    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >GDMSESSION=default</value>
+    <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
+    <value type="QString" >GDM_XSERVER_LOCATION=local</value>
+    <value type="QString" >GNOME_DESKTOP_SESSION_ID=Default</value>
+    <value type="QString" >GNOME_KEYRING_PID=5584</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-E9xzzb/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-x3Gmbl/S.gpg-agent:5688:1</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/daniel/.gtkrc-1.2-gnome2</value>
+    <value type="QString" >HOME=/home/daniel</value>
+    <value type="QString" >LANG=fr_FR.UTF-8</value>
+    <value type="QString" >LD_LIBRARY_PATH=/home/daniel/qtsdk-2009.03/lib/qtcreator:</value>
+    <value type="QString" >LOGNAME=daniel</value>
+    <value type="QString" >PATH=/home/daniel/qtsdk-2009.03/qt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString" >PWD=/home/daniel/qtsdk-2009.03/bin</value>
+    <value type="QString" >QTDIR=/home/daniel/qtsdk-2009.03/qt</value>
+    <value type="QString" >SESSION_MANAGER=local/daniel-portable:/tmp/.ICE-unix/5585</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-E9xzzb/ssh</value>
+    <value type="QString" >USER=daniel</value>
+    <value type="QString" >USERNAME=daniel</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XAUTHORITY=/home/daniel/.Xauthority</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
+    <value type="QString" >XDG_SESSION_COOKIE=3f0722d81e3d1b99947d17004a97c43c-1251609124.212898-2038540232</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >clean</value>
+    <value type="QString" >-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/daniel/Documents/updater/client</value>
   </valuemap>
  </data>
  <data>

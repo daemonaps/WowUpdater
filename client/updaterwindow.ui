@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>384</width>
-    <height>323</height>
+    <height>368</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -89,6 +89,13 @@ p, li { white-space: pre-wrap; }
         <widget class="QLineEdit" name="md5_wow">
          <property name="text">
           <string>Contenu md( du fichier wow.exe ...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblDebug">
+         <property name="text">
+          <string>Pas d'ionformation ...</string>
          </property>
         </widget>
        </item>

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'updaterwindow.ui'
 **
-** Created: Sun Aug 30 07:17:48 2009
+** Created: Sun Aug 30 08:21:13 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -48,6 +48,7 @@ public:
     QGroupBox *groupBox_3;
     QVBoxLayout *verticalLayout_3;
     QLineEdit *md5_wow;
+    QLabel *lblDebug;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -56,7 +57,7 @@ public:
     {
         if (updaterWindow->objectName().isEmpty())
             updaterWindow->setObjectName(QString::fromUtf8("updaterWindow"));
-        updaterWindow->resize(384, 323);
+        updaterWindow->resize(384, 368);
         centralWidget = new QWidget(updaterWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -124,6 +125,11 @@ public:
 
         verticalLayout_3->addWidget(md5_wow);
 
+        lblDebug = new QLabel(groupBox_3);
+        lblDebug->setObjectName(QString::fromUtf8("lblDebug"));
+
+        verticalLayout_3->addWidget(lblDebug);
+
 
         gridLayout->addWidget(groupBox_3, 3, 0, 1, 1);
 
@@ -160,6 +166,7 @@ public:
         pushButton->setText(QApplication::translate("updaterWindow", "Quitter", 0, QApplication::UnicodeUTF8));
         groupBox_3->setTitle(QApplication::translate("updaterWindow", "Debug", 0, QApplication::UnicodeUTF8));
         md5_wow->setText(QApplication::translate("updaterWindow", "Contenu md( du fichier wow.exe ...", 0, QApplication::UnicodeUTF8));
+        lblDebug->setText(QApplication::translate("updaterWindow", "Pas d'ionformation ...", 0, QApplication::UnicodeUTF8));
         Q_UNUSED(updaterWindow);
     } // retranslateUi
 

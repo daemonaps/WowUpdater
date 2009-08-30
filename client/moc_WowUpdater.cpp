@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'WowUpdater.h'
 **
-** Created: Sun Aug 30 07:20:16 2009
+** Created: Sun Aug 30 08:32:53 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,16 +23,23 @@ static const uint qt_meta_data_WowUpdater[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       3,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
+
+ // slots: signature, parameters, type, tag, flags
+      12,   11,   11,   11, 0x09,
+      28,   11,   11,   11, 0x09,
+      67,   11,   11,   11, 0x09,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_WowUpdater[] = {
-    "WowUpdater\0"
+    "WowUpdater\0\0slotReadyRead()\0"
+    "slotError(QNetworkReply::NetworkError)\0"
+    "slotRequestFinished(QNetworkReply*)\0"
 };
 
 const QMetaObject WowUpdater::staticMetaObject = {
@@ -58,6 +65,15 @@ int WowUpdater::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QMainWindow::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: slotReadyRead(); break;
+        case 1: slotError((*reinterpret_cast< QNetworkReply::NetworkError(*)>(_a[1]))); break;
+        case 2: slotRequestFinished((*reinterpret_cast< QNetworkReply*(*)>(_a[1]))); break;
+        default: ;
+        }
+        _id -= 3;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE
