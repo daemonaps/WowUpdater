@@ -5,10 +5,8 @@ QT += network
 TARGET = client
 TEMPLATE = app
 SOURCES += main.cpp \
-    updaterwindow.cpp \
-    updater.cpp \
+    WowUpdater.cpp \
     md5.c
-HEADERS += updaterwindow.h \
-    updater.h \
+HEADERS += WowUpdater.h \
     md5.h
 FORMS += updaterwindow.ui

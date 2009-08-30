@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'updaterwindow.ui'
 **
-** Created: Sat Aug 29 19:05:04 2009
+** Created: Sun Aug 30 07:17:48 2009
 **      by: Qt User Interface Compiler version 4.5.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -147,7 +147,7 @@ public:
 
     void retranslateUi(QMainWindow *updaterWindow)
     {
-        updaterWindow->setWindowTitle(QApplication::translate("updaterWindow", "updaterWindow", 0, QApplication::UnicodeUTF8));
+        updaterWindow->setWindowTitle(QApplication::translate("updaterWindow", "APS Updater Version 0.0.2", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("updaterWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

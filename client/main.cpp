@@ -1,10 +1,10 @@
 #include <QtGui/QApplication>
-#include "updaterwindow.h"
+#include "WowUpdater.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    updaterWindow w;
+    WowUpdater w;
     w.show();
     return a.exec();
 }
